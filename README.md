@@ -23,6 +23,8 @@ Pour accéder à la documentation :
 
 1. Ouvrez le dossier du projet que vous avez cloné.
 
-2. Accédez au dossier "Docs".
+2. Accédez au dossier "Docs" et notamment au document Word.
+
+3. Suivre la partie Installation.
 
 A l'intérieur se trouve un document expliquant rapidement mon développement ainsi qu'une collection Postman pour tester l'API.
