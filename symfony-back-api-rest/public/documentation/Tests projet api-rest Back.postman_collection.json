@@ -1,0 +1,561 @@
+{
+	"info": {
+		"_postman_id": "0f9ff93e-5a2c-4a46-b746-06f28486081f",
+		"name": "Tests projet api-rest Back",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18505310"
+	},
+	"item": [
+		{
+			"name": "Manage User",
+			"item": [
+				{
+					"name": "Adding One User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Matthias\",\r\n  \"surname\": \"Jouen\",\r\n  \"email\": \"matthias.jouen23@gmail.com\",\r\n  \"birthday\": \"2000-08-23T11:44:48.764Z\",\r\n  \"noteFrais\": [\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Getting User 1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8741/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editing User 1",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/merge-patch+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"surname\": \"Edit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manage Note Types",
+			"item": [
+				{
+					"name": "Adding Note type Essence",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Essence\",\r\n    \"noteFrais\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/note_types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"note_types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adding Note type Péage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Péage\",\r\n    \"noteFrais\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/note_types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"note_types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adding Note type Conférence",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Conférence\",\r\n    \"noteFrais\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/note_types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"note_types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adding Note type Repas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Repas\",\r\n    \"noteFrais\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/note_types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"note_types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Getting all Note Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8741/api/note_types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"note_types"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manage Companies",
+			"item": [
+				{
+					"name": "Adding Company Kiss The Bride",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Kiss the Bride\",\r\n    \"noteFrais\": []\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adding Company Vicinity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Vicinity\",\r\n    \"noteFrais\": []\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adding Company ToDelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ToDelete\",\r\n    \"noteFrais\": []\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleting Company 3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8741/api/companies/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"companies",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manage Note de Frais",
+			"item": [
+				{
+					"name": "Adding Note de frais 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"date\": \"2023-08-12T12:47:08.451Z\",\r\n  \"user\": \"/api/users/1\",\r\n  \"amount\": 5.40,\r\n  \"company\": \"/api/companies/1\",\r\n  \"saveDate\": \"2023-08-30T12:47:08.451Z\",\r\n  \"noteType\": \"/api/note_types/2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/note_frais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"note_frais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adding Note de frais 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"date\": \"2023-06-20T12:47:08.451Z\",\r\n  \"user\": \"/api/users/1\",\r\n  \"amount\": 112,\r\n  \"company\": \"/api/companies/2\",\r\n  \"saveDate\": \"2023-08-30T12:47:08.451Z\",\r\n  \"noteType\": \"/api/note_types/3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/note_frais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"note_frais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adding Note de frais 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"date\": \"2023-06-20T12:47:08.451Z\",\r\n  \"user\": \"/api/users/1\",\r\n  \"amount\": 112,\r\n  \"company\": \"/api/companies/2\",\r\n  \"saveDate\": \"2023-08-30T12:47:08.451Z\",\r\n  \"noteType\": \"/api/note_types/4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/note_frais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"note_frais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editing Note de frais 2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"date\": \"2023-06-20T12:47:08.451Z\",\r\n  \"user\": \"/api/users/1\",\r\n  \"amount\": 56,\r\n  \"company\": \"/api/companies/2\",\r\n  \"saveDate\": \"2023-08-30T12:47:08.451Z\",\r\n  \"noteType\": \"/api/note_types/3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8741/api/note_frais/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"note_frais",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Getting Note de frais 1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8741/api/note_frais/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"note_frais",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Getting all Note de frais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8741/api/note_frais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"note_frais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleting Note de Frais 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8741/api/note_frais/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"note_frais",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Custom request get Note de frais with id User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8741/api/user/1/note_frais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8741",
+							"path": [
+								"api",
+								"user",
+								"1",
+								"note_frais"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
